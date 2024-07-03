@@ -1,0 +1,13 @@
+from datetime import datetime
+
+def find_day_of_week(date_string):
+   
+    date = datetime.strptime(date_string, "%Y-%m-%d")
+    
+    day = date.weekday()
+    
+    days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    return days_of_week[day]
+
+date_string = "2024-07-03"
+print(find_day_of_week(date_string))
